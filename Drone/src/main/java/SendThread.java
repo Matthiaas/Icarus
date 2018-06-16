@@ -14,13 +14,13 @@ public class SendThread extends Thread {
     // probably one, maybe up to 2?
     public int mAirnValue = 1;
 
-    public int YVL = MAX_VALUE/2;
-    public int XVL = MAX_VALUE/2;
-    public int YVR = MAX_VALUE/2;
-    public int XVR = MAX_VALUE/2;
-    public int leftTrim = MAX_VALUE/2;
-    public int rightTrim = MAX_VALUE/2;
-    public int sideTrim = 0;
+    public int YVL = MAX_VALUE;
+    public int XVL = MAX_VALUE / 2;
+    public int YVR = MAX_VALUE / 2;
+    public int XVR = MAX_VALUE / 2;
+    public int leftTrim = MAX_VALUE / 2;
+    public int rightTrim = MAX_VALUE / 2;
+    public int sideTrim = MAX_VALUE / 2;
 
 
     private InetAddress devAddress;
@@ -33,7 +33,19 @@ public class SendThread extends Thread {
     }
 
     public void run() {
+        long time = System.currentTimeMillis();
         while (true) {
+
+            if (System.currentTimeMillis() - time > 4000) {
+                mToflyValue = 0;
+                mStopValue = 1;
+                //mToLandValue = 1;
+                System.out.println("OFF");
+            }
+            if (System.currentTimeMillis() - time > 7000) {
+                //mToLandValue = 0;
+            }
+
             byte[] data = new byte[11];
             data[0] = (byte) -1;
             data[1] = (byte) 8;
@@ -69,7 +81,7 @@ public class SendThread extends Thread {
             ck += data[6];
 
             //PreviewView.this.mTrimSide.getMax() - PreviewView.this.mTrimSide.getPos()
-            data[7] = (byte) ((int) (MAX_VALUE -sideTrim));
+            data[7] = (byte) ((int) (MAX_VALUE - sideTrim));
 
             ck += data[7];
 
@@ -93,8 +105,8 @@ public class SendThread extends Thread {
 
             try {
                 Thread.sleep(25);
-            } catch (InterruptedException e) {}
-
+            } catch (InterruptedException e) {
+            }
         }
     }
 

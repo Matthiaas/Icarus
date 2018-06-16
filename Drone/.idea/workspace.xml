@@ -12,15 +12,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UDPServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UDPServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3161">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -37,19 +28,25 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/SendThread.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>out.</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/PreviewView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SendThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/UDPServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SendThread.java" />
       </list>
     </option>
   </component>
@@ -239,12 +236,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529144087781</updated>
-      <workItem from="1529144089654" duration="5174000" />
+      <workItem from="1529144089654" duration="8670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5174000" />
+    <option name="totallyTimeSpent" value="8670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-12" width="2560" height="1388" extended-state="6" />
@@ -272,10 +269,10 @@
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Regex Tester" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="bottom" id="Run" order="11" visible="true" weight="0.19618055" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.31944445" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.12773438" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.12773438" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.098090276" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -303,8 +300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UDPServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3161">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="-1244">
+          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -321,7 +318,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/SendThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
         </state>
       </provider>
     </entry>

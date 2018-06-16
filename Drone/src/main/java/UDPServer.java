@@ -80,7 +80,7 @@ public class UDPServer {
                 try {
                     if (UDPServer.this.mCmdPool.size() > 0) {
                         UDPServer.this.mUDPSocket.send((DatagramPacket) UDPServer.this.mCmdPool.get(0));
-                        System.out.println("dd");
+                        //System.out.println("dd");
                         UDPServer.this.mCmdPool.remove(0);
                     }
                     Thread.sleep(1);
