@@ -1,3 +1,5 @@
+package drone;
+
 import java.net.InetAddress;
 
 public class SendThread extends Thread {
@@ -28,27 +30,54 @@ public class SendThread extends Thread {
 
     public SendThread(InetAddress devAddress) {
         this.devAddress = devAddress;
+        System.out.println("Starting UDP-Server...");
         udpServer = new UDPServer();
         udpServer.Start();
     }
 
+    public void setFlyParameters() {
+        System.out.println("Stage [0] - acquiring control");
+    }
+
+    public void setLandingParams() {
+        mToflyValue = 0;
+        mSpeedValue = 2;
+        YVL = 64;
+        mToLandValue = 1;
+        System.out.println("Stage [1] - landing approach");
+    }
+
+    public void setKillParameters() {
+        mToflyValue = 0;
+        mStopValue = 1;
+        System.out.println("Stage [2] - killing motors");
+    }
+
+    public void disconnect() {
+        System.exit(0);
+    }
+
     public void run() {
         long time = System.currentTimeMillis();
+        int stage = 0;
         while (true) {
             long d = System.currentTimeMillis() - time;
-
-            if (0 <= d && d <= 2000) {
-                System.out.println("FLY");
-            } else if (2000 < d && d <= 20000) {
-                mToflyValue = 0;
-                mSpeedValue = 2;
-                YVL = MAX_VALUE/2;
-                mToLandValue = 1;
-                System.out.println("LAND");
-            } else {
-                mToflyValue = 0;
-                mStopValue = 1;
-                System.out.println("STOP");
+            if (stage == 0) {
+                stage++;
+                time = System.currentTimeMillis();
+                setFlyParameters();
+            } else if (stage == 1 && 5000 < d) {
+                stage++;
+                time = System.currentTimeMillis();
+                setLandingParams();
+            } else if (stage == 2 && 15000 < d) {
+                stage++;
+                time = System.currentTimeMillis();
+                setKillParameters();
+            } else if (stage == 3 && 1000 < d) {
+                System.out.println("Disconnecting...");
+                disconnect();
+                return;
             }
 
             byte[] data = new byte[11];
