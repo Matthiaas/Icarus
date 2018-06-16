@@ -1,23 +1,14 @@
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 public class Main {
 
 
+    public static void main(String[] aghs) throws InterruptedException, UnknownHostException {
 
-    public static void main(String[] aghs) throws InterruptedException {
-
-
-        PreviewView.s = new UDPServer();
-        PreviewView.s.Start();
-
-
-        Thread t = new SendThread();
+        Thread t = new SendThread(InetAddress.getByName("172.16.10.1"));
         t.start();
-
-
-
         Thread.sleep(10000);
-
-
-
 
     }
 }

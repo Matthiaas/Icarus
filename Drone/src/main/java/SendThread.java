@@ -1,66 +1,101 @@
+import java.net.InetAddress;
+
 public class SendThread extends Thread {
 
+    private static final int MAX_VALUE = 255;
+
+    public int mSpeedValue = 0;
+    public int mStopValue = 0;
+    public int mToLandValue = 0;
+    public int mToflyValue = 1;
+    public int m360RollValue = 0;
+    public int mHeadLessValue = 0;
+    public int mGRightValue = 0;
+    // probably one, maybe up to 2?
+    public int mAirnValue = 1;
+
+    public int YVL = MAX_VALUE/2;
+    public int XVL = MAX_VALUE/2;
+    public int YVR = MAX_VALUE/2;
+    public int XVR = MAX_VALUE/2;
+    public int leftTrim = MAX_VALUE/2;
+    public int rightTrim = MAX_VALUE/2;
+    public int sideTrim = 0;
 
 
-    private boolean isRun = true;
+    private InetAddress devAddress;
+    private UDPServer udpServer;
+
+    public SendThread(InetAddress devAddress) {
+        this.devAddress = devAddress;
+        udpServer = new UDPServer();
+        udpServer.Start();
+    }
 
     public void run() {
-        while (this.isRun) {
+        while (true) {
             byte[] data = new byte[11];
             data[0] = (byte) -1;
             data[1] = (byte) 8;
             int ck = 0 + data[1];
 
-            data[2] = (byte) ((int) (255 / 2 * 2.0f));
+            //mLeftRocker.getYV()
+            data[2] = (byte) ((int) (YVL));
             ck += data[2];
 
-            data[3] = (byte) ((int) (255 / 2));
+            //mLeftRocker.getXV()
+            data[3] = (byte) ((int) (XVL));
             ck += data[3];
 
-            data[4] = (byte) ((int) (255/ 2));
+            //PreviewView.this.mRightRocker.getMaxY()) - PreviewView.this.mRightRocker.getYV()
+            data[4] = (byte) ((int) (MAX_VALUE - YVR));
             ck += data[4];
 
-            data[5] = (byte) ((int) (255/ 2));
-            // if ((data[4] >= (byte) 96 || data[4] <= (byte) 32 || data[5] >= (byte) 96 || data[5] <= (byte) 32) && 1 == ((Integer) PreviewView.this.mButton360Roll.getTag()).intValue()) {
-            //    PreviewView.m360RollValue = 1;
-            //}
+            //PreviewView.this.mRightRocker.getXV()
+            data[5] = (byte) ((int) (XVR));
             ck += data[5];
-            data[6] = (byte) 255/2;
-            if (PreviewView.mAirnValue == 1) {
+
+            //loopings!?!?
+
+            //mTrimLeft.getPos()
+            data[6] = (byte) leftTrim;
+            if (mAirnValue == 1) {
                 data[6] = (byte) (data[6] | 128);
             } else {
                 //data[6] = (byte) (data[6] & TransportMediator.KEYCODE_MEDIA_PAUSE);
             }
-            data[6] = (byte) (data[6] | (PreviewView.mGRightValue << 6));
+            data[6] = (byte) (data[6] | (mGRightValue << 6));
+
             ck += data[6];
-            data[7] = (byte) ((int) (255 / 2));
+
+            //PreviewView.this.mTrimSide.getMax() - PreviewView.this.mTrimSide.getPos()
+            data[7] = (byte) ((int) (MAX_VALUE -sideTrim));
+
             ck += data[7];
-            data[8] = (byte) ((int) (255 / 2));
+
+            //PreviewView.this.mTrimRight.getPos()
+            data[8] = (byte) ((int) (rightTrim));
             ck += data[8];
-            data[9] = (byte) PreviewView.mSpeedValue;
-            data[9] = (byte) (data[9] | (PreviewView.m360RollValue << 2));
-            data[9] = (byte) (data[9] | (PreviewView.mHeadLessValue << 4));
-            data[9] = (byte) (data[9] | (PreviewView.mStopValue << 5));
-            data[9] = (byte) (data[9] | (PreviewView.mToflyValue << 6));
-            data[9] = (byte) (data[9] | (PreviewView.mToLandValue << 7));
+
+            // settings (0 or 1)
+            data[9] = (byte) mSpeedValue;
+            data[9] = (byte) (data[9] | (m360RollValue << 2));
+            data[9] = (byte) (data[9] | (mHeadLessValue << 4));
+            data[9] = (byte) (data[9] | (mStopValue << 5));
+            data[9] = (byte) (data[9] | (mToflyValue << 6));
+            data[9] = (byte) (data[9] | (mToLandValue << 7));
+
+            //checksum
             data[10] = (byte) (255 - ((byte) (ck + data[9])));
 
-            //TODO: SEND DATA
-            PreviewView.s.writeUDPCmd(data, PreviewView.devAdress);
+            //sending data
+            udpServer.writeUDPCmd(data, devAddress);
+
             try {
                 Thread.sleep(25);
-            } catch (Exception e) {
-            }
+            } catch (InterruptedException e) {}
 
         }
     }
 
-    public void cancel() {
-        this.isRun = false;
-        interrupt();
-    }
-
-    public boolean getRun() {
-        return this.isRun;
-    }
 }
