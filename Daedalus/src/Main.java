@@ -7,6 +7,19 @@ import java.net.UnknownHostException;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, UnknownHostException {
+        /*
+
+        ApiContextInitializer.init();
+        TelegramBotsApi botsApi = new TelegramBotsApi();
+        try {
+            botsApi.registerBot(new MyAmazingBot());
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+
+         */
+
+
         // make sure arp-scan is installed!!!
 
         String ifName_managed = args[0];
