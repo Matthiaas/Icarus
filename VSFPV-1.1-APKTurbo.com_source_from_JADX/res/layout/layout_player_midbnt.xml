@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:orientation="vertical" app:layout_width="wrap_content" app:layout_height="match_parent"
+    <LinearLayout app:layout_width="wrap_content" app:layout_height="match_parent" app:layout_weight="1.0">
+        <et.song.ui.widgets.ETButton app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@+id/button_switch_video" app:background="@drawable/ic_reload_1" app:layout_width="UNKNOWN_DATA_0x7f080010" app:layout_height="UNKNOWN_DATA_0x7f080010" />
+    </LinearLayout>
+    <LinearLayout app:layout_width="wrap_content" app:layout_height="match_parent" app:layout_weight="1.0">
+        <et.song.ui.widgets.ETButton app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@+id/button_guiji" app:background="@drawable/ic_guiji_off" app:layout_width="UNKNOWN_DATA_0x7f080010" app:layout_height="UNKNOWN_DATA_0x7f080010" />
+    </LinearLayout>
+</LinearLayout>

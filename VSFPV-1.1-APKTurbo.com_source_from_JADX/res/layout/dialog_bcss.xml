@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_size_20" android:text="对比度" android:layout_below="@+id/tvContrast" android:layout_alignLeft="@+id/tvContrast" />
+    <TextView android:id="@+id/tvSaturation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_size_20" android:text="饱和度" android:layout_below="@+id/TextView01" android:layout_alignLeft="@+id/TextView01" />
+    <TextView android:id="@+id/tvSharpness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_size_20" android:text="锐度" android:layout_below="@+id/tvSaturation" android:layout_alignLeft="@+id/tvSaturation" />
+    <SeekBar android:id="@+id/SeekBarContrast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_size_10" android:layout_toRightOf="@+id/TextView01" android:layout_above="@+id/tvSaturation" android:layout_alignParentRight="true" />
+    <SeekBar android:id="@+id/SeekBarSaturation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/tvSharpness" android:layout_alignLeft="@+id/SeekBarContrast" android:layout_alignParentRight="true" />
+    <SeekBar android:id="@+id/SeekBarSharpness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/SeekBarSaturation" android:layout_alignBottom="@+id/tvSharpness" android:layout_alignParentRight="true" />
+    <SeekBar android:id="@+id/SeekBarBrightNess" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/SeekBarContrast" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <TextView android:id="@+id/tvContrast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="亮度" android:layout_alignBottom="@+id/SeekBarBrightNess" android:layout_alignParentLeft="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@+id/menu2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_below="@+id/tvSharpness" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+        <Button android:textSize="@dimen/text_size" android:id="@+id/btnSave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/text_size" android:id="@+id/btnCancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取消" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

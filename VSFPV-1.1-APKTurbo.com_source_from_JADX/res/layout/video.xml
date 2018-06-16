@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/tvPreStreamInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="" android:layout_alignParentRight="true" />
+    <RelativeLayout android:id="@+id/menu" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/menu2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnRemoteRec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="远程录像" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnRemoteShot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="远程截图" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnLocateRec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本地录像" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnLocateShot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本地截图" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnAudio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开启音频" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnTalk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开启对讲" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnStreamChange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="切换码流" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnSerial" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="串口通讯" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size" android:id="@+id/btnBCSS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="色彩调节" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textColor="#ff0000" android:id="@+id/tvRecTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_size_20" android:text="00:00:00" android:layout_toRightOf="@+id/menu2" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

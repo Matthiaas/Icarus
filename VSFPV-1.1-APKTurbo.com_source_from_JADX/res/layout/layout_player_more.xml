@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" custom:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" custom:orientation="vertical" custom:layout_width="wrap_content" custom:layout_height="wrap_content">
+    <et.song.ui.widgets.ETButton custom:id="@+id/button_rev" custom:background="@drawable/ic_rev" custom:layout_width="UNKNOWN_DATA_0x7f080010" custom:layout_height="UNKNOWN_DATA_0x7f080010" custom:layout_marginLeft="@dimen/top_bnt_lmargin" custom:layout_marginTop="@dimen/top_bnt_tmargin" />
+    <et.song.ui.widgets.ETButton custom:id="@+id/button_3d" custom:background="@drawable/ic_3d_off" custom:layout_width="UNKNOWN_DATA_0x7f080010" custom:layout_height="UNKNOWN_DATA_0x7f080010" custom:layout_marginLeft="@dimen/top_bnt_lmargin" custom:layout_marginTop="@dimen/top_bnt_tmargin" />
+    <et.song.ui.widgets.ETButton custom:id="@+id/button_nohead" custom:background="@drawable/ic_nohead" custom:layout_width="UNKNOWN_DATA_0x7f080010" custom:layout_height="UNKNOWN_DATA_0x7f080010" custom:layout_marginLeft="@dimen/top_bnt_lmargin" custom:layout_marginTop="@dimen/top_bnt_tmargin" />
+    <et.song.ui.widgets.ETButton custom:id="@+id/button_g_right" custom:background="@drawable/ic_g_right" custom:layout_width="UNKNOWN_DATA_0x7f080010" custom:layout_height="UNKNOWN_DATA_0x7f080010" custom:layout_marginLeft="@dimen/top_bnt_lmargin" custom:layout_marginTop="@dimen/top_bnt_tmargin" />
+</LinearLayout>

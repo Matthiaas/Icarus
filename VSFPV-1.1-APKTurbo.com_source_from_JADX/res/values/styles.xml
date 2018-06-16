@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyDialogStyle">
+        <item>?unknown_ref: 106000d</item>
+        <item>true</item>
+        <item>false</item>
+    </style>
+    <style name="ETLoadDialog">
+        <item>@color/transparent</item>
+        <item>?unknown_ref: 0</item>
+        <item>true</item>
+        <item>true</item>
+        <item>?unknown_ref: 0</item>
+    </style>
+    <style name="TopLinearLayout">
+        <item>1</item>
+        <item>-1</item>
+        <item>-2</item>
+        <item>1.0</item>
+    </style>
+    <style name="TopBtn">
+        <item>11</item>
+        <item>@dimen/top_bnt_size_width</item>
+        <item>@dimen/top_bnt_size_height</item>
+    </style>
+</resources>

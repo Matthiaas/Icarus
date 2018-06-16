@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo bettercap -caplet caplets/repimg.cap
+
+

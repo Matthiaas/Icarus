@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" custom:layout_width="wrap_content" custom:layout_height="match_parent">
+    <et.song.ui.widgets.ETTBTrim custom:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" custom:id="@+id/trim_side" custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:ball="@drawable/ic_tbtrim_ball" custom:et_background="@drawable/ic_tbtrim_bg" custom:min="0" custom:max="32" custom:leftBackground="@drawable/ic_tbtrim_left" custom:rightBackground="@drawable/ic_tbtrim_right" />
+</LinearLayout>

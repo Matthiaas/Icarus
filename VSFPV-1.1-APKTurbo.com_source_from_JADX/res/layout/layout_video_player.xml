@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/video_player_controller_layout" android:layout_width="match_parent" android:layout_height="match_parent"
+        <RelativeLayout android:background="#77000000" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x2201">
+            <ImageButton android:id="@+id/video_player_backButton" android:background="0x0" android:padding="10dp" android:layout_width="UNKNOWN_DATA_0x3201" android:layout_height="match_parent" android:src="@mipmap/back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:ellipsize="marquee" android:id="@+id/video_player_filename_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="(FileName)" android:maxLines="1" android:layout_toLeftOf="@+id/video_player_scale_button" android:layout_toRightOf="@+id/video_player_backButton" android:layout_centerVertical="true" />
+            <ImageButton android:id="@+id/video_player_scale_button" android:background="0x0" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:src="@mipmap/vp_scale_fill" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="#77000000" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x3201" android:layout_alignParentBottom="true">
+            <ImageButton android:id="@+id/video_player_play_button" android:background="0x0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:src="@mipmap/vp_pause" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:id="@+id/video_player_current_time_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="00:00:00" android:layout_toRightOf="@+id/video_player_play_button" android:layout_centerVertical="true" />
+            <TextView android:id="@+id/video_player_total_time_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:text="00:00:00" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <SeekBar android:id="@+id/video_player_seekbar" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/video_player_total_time_TextView" android:layout_toRightOf="@+id/video_player_current_time_TextView" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

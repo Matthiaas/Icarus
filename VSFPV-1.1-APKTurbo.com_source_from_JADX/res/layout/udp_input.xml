@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/tvDNS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="端口:" android:layout_alignBaseline="@+id/edtDNS" android:layout_alignBottom="@+id/edtDNS" android:layout_alignParentLeft="true" />
+    <TextView android:id="@+id/tvIpAddr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IP地址:" android:layout_alignBaseline="@+id/editIpAddr" android:layout_alignBottom="@+id/editIpAddr" android:layout_alignParentLeft="true" />
+    <Button android:id="@+id/btnPlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:text="播放" android:layout_below="@+id/edtDNS" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <EditText android:id="@+id/edtDNS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="8888" android:ems="10" android:singleLine="true" android:numeric="integer|signed|decimal" android:layout_below="@+id/editIpAddr" android:layout_alignLeft="@+id/editIpAddr" android:layout_alignParentRight="true">
+        <requestFocus />
+    </EditText>
+    <EditText android:id="@+id/editIpAddr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="" android:ems="10" android:layout_below="@+id/radioGroup1" android:layout_alignLeft="@+id/radioGroup1" android:layout_alignParentRight="true" />
+    <RadioGroup android:orientation="horizontal" android:id="@+id/radioGroup1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_toRightOf="@+id/tvDeviceType" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <RadioButton android:id="@+id/radio0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="8610" />
+        <RadioButton android:id="@+id/radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8620" />
+        <RadioButton android:id="@+id/radio2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8810" />
+        <RadioButton android:id="@+id/radio3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RTSP" />
+    </RadioGroup>
+    <TextView android:id="@+id/tvDeviceType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:text="设备类型:" android:layout_alignBottom="@+id/radioGroup1" android:layout_alignParentLeft="true" />
+</RelativeLayout>

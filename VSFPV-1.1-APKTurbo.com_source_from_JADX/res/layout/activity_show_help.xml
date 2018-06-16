@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/imageHelp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:contentDescription="@string/app_name" />
+    <et.song.ui.widgets.ETButton android:id="@+id/btn_back" android:background="@drawable/help_back" android:layout_width="UNKNOWN_DATA_0x3f01" android:layout_height="UNKNOWN_DATA_0x1e01" />
+    <et.song.ui.widgets.ETButton android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@+id/btn_last" android:background="@drawable/help_last" android:layout_width="UNKNOWN_DATA_0x2301" android:layout_height="UNKNOWN_DATA_0x3201" />
+    <et.song.ui.widgets.ETButton android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/btn_next" android:background="@drawable/help_next" android:layout_width="UNKNOWN_DATA_0x2301" android:layout_height="UNKNOWN_DATA_0x3201" />
+</FrameLayout>

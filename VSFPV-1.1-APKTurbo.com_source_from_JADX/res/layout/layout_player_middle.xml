@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:orientation="horizontal" app:layout_width="match_parent" app:layout_height="match_parent">
+    <RelativeLayout app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_weight="1.0">
+        <et.song.ui.widgets.ETLeftRocker app:id="@+id/rocker_left" app:layout_width="UNKNOWN_DATA_0x7f080015" app:layout_height="UNKNOWN_DATA_0x7f080015" app:layout_centerHorizontal="true" app:layout_centerVertical="true" app:BallSize="@dimen/rocker_ball_size" app:BitmapBg="@drawable/rocker_bk_left" app:BitmapBall="@drawable/rocker" />
+    </RelativeLayout>
+    <RelativeLayout app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_weight="1.0">
+        <et.song.ui.widgets.ETRightRocker app:id="@+id/rocker_right" app:layout_width="UNKNOWN_DATA_0x7f080015" app:layout_height="UNKNOWN_DATA_0x7f080015" app:layout_centerHorizontal="true" app:layout_centerVertical="true" app:BallSize="@dimen/rocker_ball_size" app:BitmapBg="@drawable/rocker_bk_right" app:BitmapBall="@drawable/rocker" />
+    </RelativeLayout>
+</LinearLayout>

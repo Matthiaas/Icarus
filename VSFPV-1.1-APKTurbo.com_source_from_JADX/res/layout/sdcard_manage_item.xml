@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="@dimen/text_size_small" android:textColor="#c0c0c0" android:id="@+id/tvItemDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xx" android:layout_below="@+id/tvItemTitle" android:layout_alignLeft="@+id/tvItemTitle" />
+    <TextView android:textSize="@dimen/text_size" android:textColor="#ffffffff" android:id="@+id/tvItemTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xxxx" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+</RelativeLayout>

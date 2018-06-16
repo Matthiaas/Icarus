@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:orientation="horizontal" app:layout_width="match_parent" app:layout_height="wrap_content"
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_back" app:background="@drawable/ic_back" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_photo" app:background="@drawable/ic_photo" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_reco" app:background="@drawable/ic_reco_off" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_album" app:background="@drawable/ic_album" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_speed" app:background="@drawable/ic_speed_0" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_atmospheric" app:background="@drawable/atmospheric_off" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_g" app:background="@drawable/ic_g_off" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_hide" app:background="@drawable/ic_hide" style="@style/TopBtn" />
+    </LinearLayout>
+    <LinearLayout style="@style/TopLinearLayout">
+        <et.song.ui.widgets.ETButton app:id="@+id/button_hidemore" app:background="@drawable/ic_more" style="@style/TopBtn" />
+    </LinearLayout>
+</LinearLayout>

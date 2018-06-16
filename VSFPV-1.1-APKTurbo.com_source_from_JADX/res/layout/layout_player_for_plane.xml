@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" appattrs:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" appattrs:orientation="horizontal" appattrs:layout_width="match_parent" appattrs:layout_height="match_parent">
+    <RelativeLayout appattrs:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" appattrs:id="@+id/layout_plane_left" appattrs:layout_width="match_parent" appattrs:layout_height="match_parent" appattrs:layout_weight="1.0">
+        <et.song.ui.widgets.ETPlaneRocker appattrs:id="@+id/rocker_left_plane" appattrs:visibility="invisible" appattrs:layout_width="UNKNOWN_DATA_0x7f080016" appattrs:layout_height="UNKNOWN_DATA_0x7f080016" appattrs:layout_centerHorizontal="true" appattrs:layout_centerVertical="true" appattrs:BallSize="@dimen/rocker_ball_size" appattrs:BitmapBg="@drawable/rocker_bk_left" appattrs:BitmapBall="@drawable/rocker" />
+    </RelativeLayout>
+    <RelativeLayout appattrs:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" appattrs:id="@+id/layout_plane_right" appattrs:layout_width="match_parent" appattrs:layout_height="match_parent" appattrs:layout_weight="1.0">
+        <et.song.ui.widgets.ETPlaneRocker appattrs:id="@+id/rocker_right_plane" appattrs:visibility="invisible" appattrs:layout_width="UNKNOWN_DATA_0x7f080016" appattrs:layout_height="UNKNOWN_DATA_0x7f080016" appattrs:layout_centerHorizontal="true" appattrs:layout_centerVertical="true" appattrs:BallSize="@dimen/rocker_ball_size" appattrs:BitmapBg="@drawable/rocker_bk_right" appattrs:BitmapBall="@drawable/rocker" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ListView android:id="@+id/listView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tvDNS" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="@dimen/text_size" android:id="@+id/tvDNS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点击搜索按钮进行搜索" android:layout_alignParentLeft="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@+id/menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_size_10" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/text_size" android:id="@+id/btnSearch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="搜索设备" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/text_size" android:id="@+id/btnWIFI" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="新增设备" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/text_size" android:id="@+id/btnOneKey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UDP点播" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/text_size" android:id="@+id/btnManual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手动登入" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:layout_width="match_parent" app:layout_height="wrap_content">
+    <View app:id="@+id/top_bg" app:background="#757575" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x3c01" app:alpha="0.5" />
+    <include app:id="@+id/layout_top" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_alignTop="@+id/top_bg" app:layout_alignBottom="@+id/top_bg" layout="@layout/layout_player_top" />
+</RelativeLayout>

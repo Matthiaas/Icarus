@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ball">
+        <item>17</item>
+    </attr>
+    <attr name="et_background">
+        <item>17</item>
+    </attr>
+    <attr name="min">
+        <item>4</item>
+    </attr>
+    <attr name="max">
+        <item>4</item>
+    </attr>
+    <attr name="leftBackground">
+        <item>17</item>
+    </attr>
+    <attr name="rightBackground">
+        <item>17</item>
+    </attr>
+    <attr name="start">
+        <item>4</item>
+    </attr>
+    <attr name="end">
+        <item>4</item>
+    </attr>
+    <attr name="OnBackground">
+        <item>17</item>
+    </attr>
+    <attr name="OffBackground">
+        <item>17</item>
+    </attr>
+    <attr name="layout_widthPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_heightPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_marginPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_marginLeftPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_marginTopPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_marginRightPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_marginBottomPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_marginStartPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_marginEndPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_textSizePercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_maxWidthPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_maxHeightPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_minWidthPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_minHeightPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_paddingPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_paddingTopPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_paddingBottomPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_paddingLeftPercent">
+        <item>2</item>
+    </attr>
+    <attr name="layout_paddingRightPercent">
+        <item>2</item>
+    </attr>
+    <attr name="borderWidth">
+        <item>64</item>
+    </attr>
+    <attr name="borderColor">
+        <item>16</item>
+    </attr>
+    <attr name="borderRadius">
+        <item>64</item>
+    </attr>
+    <attr name="passwordLength">
+        <item>4</item>
+    </attr>
+    <attr name="passwordWidth">
+        <item>64</item>
+    </attr>
+    <attr name="passwordColor">
+        <item>16</item>
+    </attr>
+    <attr name="passwordRadius">
+        <item>64</item>
+    </attr>
+    <attr name="MarginSize">
+        <item>64</item>
+    </attr>
+    <attr name="BallSize">
+        <item>64</item>
+    </attr>
+    <attr name="BitmapBg">
+        <item>1</item>
+    </attr>
+    <attr name="BitmapBall">
+        <item>1</item>
+    </attr>
+</resources>

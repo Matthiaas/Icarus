@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_size_20" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/text_size" android:id="@+id/btnSet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存" android:layout_weight="1.0" />
+    </LinearLayout>
+    <Spinner android:id="@+id/spinner2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/spinnerDevType" android:layout_alignLeft="@+id/spinnerDevType" android:layout_alignParentRight="true" />
+    <TextView android:textSize="@dimen/text_size" android:id="@+id/tvDNS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wifi安全类型：" android:layout_toLeftOf="@+id/spinner2" android:layout_alignTop="@+id/spinner2" />
+    <EditText android:id="@+id/etSSID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_size_30" android:ems="10" android:singleLine="true" android:layout_alignLeft="@+id/spinnerDevType" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <EditText android:id="@+id/edtDNS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:singleLine="true" android:layout_toRightOf="@+id/tvPsk" android:layout_below="@+id/etSSID" android:layout_alignParentRight="true" />
+    <TextView android:textSize="@dimen/text_size" android:id="@+id/tvPsk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PSK：" android:layout_below="@+id/etSSID" android:layout_alignRight="@+id/tvChannel" />
+    <TextView android:textSize="@dimen/text_size" android:id="@+id/tvRecTypeName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SSID：" android:layout_alignBaseline="@+id/etSSID" android:layout_alignRight="@+id/tvPsk" android:layout_alignBottom="@+id/etSSID" />
+    <EditText android:id="@+id/EditText02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:singleLine="true" android:layout_below="@+id/edtDNS" android:layout_alignLeft="@+id/edtDNS" android:layout_alignParentRight="true">
+        <requestFocus />
+    </EditText>
+    <TextView android:textSize="@dimen/text_size" android:id="@+id/tvChannel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Channel：" android:layout_toLeftOf="@+id/spinnerDevType" android:layout_below="@+id/edtDNS" />
+    <Spinner android:id="@+id/spinnerDevType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/tvQuality" android:layout_below="@+id/EditText02" android:layout_alignParentRight="true" />
+    <TextView android:textSize="@dimen/text_size" android:id="@+id/tvQuality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wifi工作模式：" android:layout_alignTop="@+id/spinnerDevType" android:layout_alignParentLeft="true" />
+</RelativeLayout>

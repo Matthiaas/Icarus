@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:layout_width="match_parent" app:layout_height="match_parent">
+    <ImageView app:id="@+id/imageBg" app:background="@drawable/video_bg" app:layout_width="match_parent" app:layout_height="match_parent" app:scaleType="matrix" />
+    <include app:id="@+id/layout_player_for_plane" app:layout_width="match_parent" app:layout_height="match_parent" layout="@layout/layout_player_for_plane" />
+    <include app:id="@+id/layout_bottom" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_toLeftOf="@+id/layout_right" app:layout_alignParentBottom="true" layout="@layout/layout_player_bottom" />
+    <include app:id="@+id/layout_top" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_alignParentTop="true" app:layout_centerHorizontal="true" layout="@layout/layout_player_top_all" />
+    <RelativeLayout app:layout_width="match_parent" app:layout_height="match_parent" app:layout_above="@+id/layout_bottom" app:layout_below="@+id/layout_top">
+        <include app:id="@+id/layout_player_middle" app:layout_width="match_parent" app:layout_height="match_parent" layout="@layout/layout_player_middle" />
+        <include app:id="@+id/layout_player_midbnt" app:layout_width="wrap_content" app:layout_height="match_parent" app:layout_centerHorizontal="true" layout="@layout/layout_player_midbnt" />
+    </RelativeLayout>
+    <include app:id="@+id/layout_player_right" app:layout_width="wrap_content" app:layout_height="match_parent" app:layout_marginRight="10dp" app:layout_alignParentRight="true" layout="@layout/layout_player_right" />
+    <include app:id="@+id/layout_more" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_below="@+id/layout_top" app:layout_alignParentRight="true" layout="@layout/layout_player_more" />
+    <include app:id="@+id/layout_flyland" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_alignParentBottom="true" layout="@layout/layout_fly_land" />
+    <LinearLayout app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_below="@+id/layout_top">
+        <View app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="wrap_content" app:layout_weight="1.0" />
+        <TextView app:textColor="#ff0000" app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@+id/tvRecTime" app:visibility="invisible" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="wrap_content" app:text="00:00:00" app:layout_weight="3.0" />
+        <View app:visibility="invisible" app:layout_width="UNKNOWN_DATA_0x1" app:layout_height="wrap_content" app:layout_weight="5.0" />
+    </LinearLayout>
+    <ProgressBar app:id="@+id/progressBar1" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_centerHorizontal="true" app:layout_centerVertical="true" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+    <et.song.ui.widgets.ETButton android:id="@+id/button_toland" android:background="@drawable/ic_to_land" android:layout_width="UNKNOWN_DATA_0x7f080010" android:layout_height="UNKNOWN_DATA_0x7f080010" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <et.song.ui.widgets.ETButton android:id="@+id/button_tofly" android:background="@drawable/ic_to_fly" android:layout_width="UNKNOWN_DATA_0x7f080010" android:layout_height="UNKNOWN_DATA_0x7f080010" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

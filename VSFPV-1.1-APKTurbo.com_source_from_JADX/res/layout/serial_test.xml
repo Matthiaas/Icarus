@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:id="@+id/btnSerialStart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_size_20" android:text="开启" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <Button android:id="@+id/btnSerialSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发送" android:layout_below="@+id/btnSerialStart" android:layout_alignRight="@+id/btnSerialStart" android:layout_alignParentLeft="true" />
+    <Button android:id="@+id/btnSerialSendtoPort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发送至端口" android:layout_below="@+id/btnSerialStop" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <TextView android:id="@+id/tvSerial" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_size_50" android:text="TextView" android:layout_below="@+id/btnSerialSendtoPort" android:layout_centerHorizontal="true" />
+    <Button android:id="@+id/btnSerialStop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="停止" android:layout_below="@+id/btnSerialSend" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <Button android:id="@+id/btnTestBCSS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BCSS" android:layout_below="@+id/btnSerialSendtoPort" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

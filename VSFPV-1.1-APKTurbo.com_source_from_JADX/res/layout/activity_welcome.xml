@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/splash_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <et.song.ui.widgets.ETButton android:id="@+id/button_setting" android:background="@drawable/ic_setting" android:visibility="invisible" android:layout_width="UNKNOWN_DATA_0x5501" android:layout_height="UNKNOWN_DATA_0x5501" android:layout_marginLeft="30dp" android:layout_toRightOf="@+id/button_help" android:layout_alignTop="@+id/button_help" />
+    <et.song.ui.widgets.ETButton android:id="@+id/button_help" android:background="@drawable/ic_help" android:layout_width="UNKNOWN_DATA_0x7801" android:layout_height="UNKNOWN_DATA_0x3c01" android:layout_alignBottom="@+id/button_start" android:layout_alignParentLeft="true" />
+    <et.song.ui.widgets.ETButton android:id="@+id/button_start" android:background="@drawable/ic_start" android:layout_width="UNKNOWN_DATA_0x7801" android:layout_height="UNKNOWN_DATA_0x3c01" android:layout_marginBottom="41dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <et.song.ui.widgets.ETButton android:id="@+id/button_url" android:background="@drawable/ic_url" android:visibility="gone" android:layout_width="UNKNOWN_DATA_0x7801" android:layout_height="UNKNOWN_DATA_0x3c01" android:layout_alignBottom="@+id/button_start" android:layout_centerHorizontal="true" />
+</RelativeLayout>

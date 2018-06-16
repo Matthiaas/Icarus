@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto" custom:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" custom:orientation="horizontal" custom:layout_width="match_parent" custom:layout_height="wrap_content" custom:minHeight="@dimen/top_bnt_size">
+    <RelativeLayout custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_weight="1.0">
+        <et.song.ui.widgets.ETTrim custom:id="@+id/trim_left" custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_centerHorizontal="true" custom:ball="@drawable/ic_trim_ball" custom:et_background="@drawable/ic_trim_bg" custom:min="0" custom:max="32" custom:leftBackground="@drawable/ic_trim_left" custom:rightBackground="@drawable/ic_trim_right" />
+    </RelativeLayout>
+    <et.song.ui.widgets.ETButton custom:id="@+id/button_stop" custom:background="@drawable/ic_stop_off" custom:visibility="gone" custom:layout_width="UNKNOWN_DATA_0x7f080010" custom:layout_height="UNKNOWN_DATA_0x7f080010" custom:layout_marginTop="@dimen/top_bnt_tmargin" />
+    <RelativeLayout custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_weight="1.0">
+        <et.song.ui.widgets.ETTrim custom:id="@+id/trim_right" custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_centerHorizontal="true" custom:ball="@drawable/ic_trim_ball" custom:et_background="@drawable/ic_trim_bg" custom:min="0" custom:max="32" custom:leftBackground="@drawable/ic_trim_left" custom:rightBackground="@drawable/ic_trim_right" />
+    </RelativeLayout>
+</LinearLayout>

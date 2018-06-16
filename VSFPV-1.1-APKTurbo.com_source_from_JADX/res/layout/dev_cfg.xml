@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/tvPsk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_size_50" android:text="textView" android:layout_above="@+id/btnreset" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+    <Button android:id="@+id/btnreset" android:layout_width="UNKNOWN_DATA_0xc801" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_size_50" android:text="开始配置设备" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <TextView android:id="@+id/tvDNS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  配置设备:
+  1、保证设备开启；
+  2、将手机连接路由器；
+  3、点击配置按钮，输入路由器密码；
+  4、设备将自动登录并修改WIFI模式、重启；
+  5、待设备重启成功后回主菜单进行设备搜索。" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <ProgressBar android:id="@+id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_size_20" android:layout_above="@+id/tvPsk" android:layout_centerHorizontal="true" style="?unknown_attr_ref: 101007a" />
+</RelativeLayout>

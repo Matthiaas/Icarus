@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/tvPBStreamInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="" android:layout_alignParentRight="true" />
+    <TextView android:id="@+id/tvForBUG" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" " android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    <RelativeLayout android:id="@+id/control" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/btn3D" android:layout_width="UNKNOWN_DATA_0x3f01" android:layout_height="UNKNOWN_DATA_0x3c01" android:src="@drawable/ic_3d_off" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@+id/btnBack" android:layout_width="UNKNOWN_DATA_0x3f01" android:layout_height="UNKNOWN_DATA_0x3c01" android:src="@drawable/ic_back" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <RelativeLayout android:id="@+id/control_below" android:background="@drawable/pb_ctrl_bg" android:layout_width="match_parent" android:layout_height="UNKNOWN_DATA_0x5001" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:alpha="0.5"
+            &quot;>
+            <SeekBar android:id="@+id/seekBarProgress" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="@dimen/text_size" android:id="@+id/pbStopTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_alignBottom="@+id/btnPBPlay" android:layout_alignParentRight="true" />
+            <TextView android:id="@+id/tvStreamType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" android:layout_toLeftOf="@+id/pbStopTime" android:layout_alignLeft="@+id/pbStopTime" android:layout_alignBottom="@+id/pbStopTime" />
+            <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" android:layout_toLeftOf="@+id/pbStopTime" android:layout_alignBaseline="@+id/pbStopTime" android:layout_alignBottom="@+id/pbStopTime" />
+            <TextView android:textSize="@dimen/text_size" android:id="@+id/pbCurrentTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_toLeftOf="@+id/textView2" android:layout_alignBottom="@+id/textView2" />
+            <TextView android:id="@+id/tvPBSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_above="@+id/pbStopTime" android:layout_alignParentRight="true" />
+            <ImageView android:id="@+id/btnPBSpeedDown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_size_5" android:src="0x1080026" android:scaleType="fitXY" android:layout_toRightOf="@+id/btnPBPlay" android:layout_above="@+id/seekBarProgress" />
+            <ImageView android:id="@+id/btnPBSpeedUp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_size_5" android:src="0x1080021" android:scaleType="fitXY" android:layout_toRightOf="@+id/btnPBSpeedDown" android:layout_above="@+id/seekBarProgress" />
+            <ImageView android:id="@+id/btnPBPlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="0x1080024" android:scaleType="fitXY" android:layout_above="@+id/seekBarProgress" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

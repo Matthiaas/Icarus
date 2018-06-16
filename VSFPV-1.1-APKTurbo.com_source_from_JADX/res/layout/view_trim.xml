@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" custom:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" custom:layout_width="wrap_content" custom:layout_height="wrap_content">
+    <et.song.ui.widgets.ETButton custom:id="@+id/left" custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_margin="0dp" custom:layout_centerVertical="true" custom:contentDescription="@string/app_name" />
+    <RelativeLayout custom:id="@+id/bg" custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_toRightOf="@+id/left" custom:layout_centerVertical="true">
+        <ImageView custom:id="@+id/ball" custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_centerHorizontal="true" custom:layout_centerVertical="true" custom:contentDescription="@string/app_name" />
+    </RelativeLayout>
+    <et.song.ui.widgets.ETButton custom:id="@+id/right" custom:layout_width="wrap_content" custom:layout_height="wrap_content" custom:layout_margin="0dp" custom:layout_toRightOf="@+id/bg" custom:layout_centerVertical="true" custom:contentDescription="@string/app_name" />
+</RelativeLayout>
