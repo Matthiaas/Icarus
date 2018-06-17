@@ -29,12 +29,10 @@ bool anaUDPPacket(PDU& pkt) {
         const RawPDU& raw = udp.rfind_pdu<RawPDU>();
         const RawPDU::payload_type& payload = raw.payload();
 
-        cout << std::hex<<(int )payload[0] <<" " <<(int) payload[1] <<" " << (int)payload[2] <<" ";
+        cout << std::hex<<(int )payload[0] <<" " <<(int) payload[1] <<" " << (int)payload[2] <<"\n";
 
 
         IP pkt = IP("10.177.255.115") / TCP(30111) / raw;
-
-        
 
 
     }
