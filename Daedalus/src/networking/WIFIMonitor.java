@@ -45,7 +45,7 @@ public class WIFIMonitor {
     }
 
 
-    private static Set<String> getWifiAP() throws IOException {
+    public static Set<String> getWifiAP() throws IOException {
 
         Set<String> result = new HashSet<String>(20);
         BufferedReader stdInput = Terminal.exec("nmcli dev wifi");

@@ -44,7 +44,7 @@ public class GUIMain extends JDialog implements WIFIHandler {
         HIJACKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                if(enabled)
+                if(!enabled)
                 {
                     LANDButton.setEnabled(true);
                     KILLButton.setEnabled(true);
