@@ -1,7 +1,6 @@
-package networking;
-
-import GUI.GUIMain;
-import networking.Procedures;
+import org.telegram.telegrambots.ApiContextInitializer;
+import org.telegram.telegrambots.TelegramBotsApi;
+import org.telegram.telegrambots.exceptions.TelegramApiException;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -16,6 +15,17 @@ public class Main {
             ifName_managed = args[0];
             ifName_monitor = args[1];
         }
+
+        ApiContextInitializer.init();
+        TeleBot bot = new TeleBot();
+        TelegramBotsApi botsApi = new TelegramBotsApi();
+        try {
+            botsApi.registerBot(bot);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+
+
 
         System.out.println("Using [" + ifName_managed + "] as managed-interface");
         System.out.println("Using [" + ifName_monitor + "] as monitor-interface");
@@ -38,6 +48,11 @@ public class Main {
             o("Drones found:");
             for(String d : strings){
                 o("\t" + d);
+            }
+
+            bot.sendAll("Some Drones where found:");
+            for(String d : strings){
+                bot.sendAll( d);
             }
 
             o("");
@@ -89,7 +104,7 @@ public class Main {
 
         // start gui, register for wifi monitor
 
-        //networking.Procedures.land("9300-0006C7");
+        //Procedures.land("9300-0006C7");
         //System.out.println(Procedures.info("9300-0006C7"));
     }
 

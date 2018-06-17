@@ -1,8 +1,3 @@
-package networking;
-
-import drone.DroneConnection;
-import networking.Networking;
-
 public class Procedures {
 
     private static DroneConnection hijack(String essid) {
