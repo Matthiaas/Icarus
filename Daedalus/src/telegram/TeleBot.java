@@ -1,4 +1,4 @@
-package networking;
+package telegram;
 
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
@@ -8,7 +8,7 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class MyAmazingBot extends TelegramLongPollingBot {
+public class TeleBot extends TelegramLongPollingBot {
 
 
     Set<Long> chatIds = new HashSet<Long>();
@@ -16,7 +16,6 @@ public class MyAmazingBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
 
         if (update.hasMessage()) {
-
             chatIds.add(update.getMessage().getChatId());
             //System.out.println(update.getMessage().getChatId());
         }
@@ -43,7 +42,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
     public String getBotUsername() {
         // Return bot username
-        // If bot username is @MyAmazingBot, it must return 'MyAmazingBot'
+        // If bot username is @TeleBot, it must return 'TeleBot'
         return "DroneIcarusBot";
     }
 
