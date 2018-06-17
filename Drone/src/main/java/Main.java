@@ -1,4 +1,7 @@
+package main.java;
+
 import drone.DroneController;
+import main.java.bot.Email;
 import networking.AirocrackSuite;
 import networking.Networking;
 import networking.WlanNameFinder;
@@ -11,8 +14,10 @@ import java.util.Set;
 
 public class Main {
 
-
     public static void main(String[] args) throws InterruptedException, UnknownHostException {
+
+
+        //Thread.sleep(10000);
 
         String ifName_managed = args[0];
         String ifName_monitor = args[1];
@@ -29,6 +34,8 @@ public class Main {
 
         String essid = essids.iterator().next();
         System.out.println("Drone found at [" + essid + "]");
+
+        //Email.SendMailSSL("Drone ALERT", "Found drone with essid: " + essid + " in close proximity!");
 
         /*connect to wifi*/
         System.out.println("Conneceting to [" + essid + "]");

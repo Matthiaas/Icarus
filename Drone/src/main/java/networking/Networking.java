@@ -11,7 +11,7 @@ public class Networking {
 
         if(essid.equals(Networking.findConnectedNetwork(ifName))) return true;
 
-        BufferedReader consoleOutput = Terminal.exec(String.format("nmcli dev wifi connect %s ifname %s", essid, ifName));
+        BufferedReader consoleOutput = networking.Terminal.exec(String.format("nmcli dev wifi connect %s ifname %s", essid, ifName));
         try {
             consoleOutput.readLine();
             System.err.println(consoleOutput.readLine());
@@ -25,7 +25,7 @@ public class Networking {
 
     public static String getMAC(String ip) {
         try {
-            BufferedReader out = Terminal.exec("sudo arp-scan " + ip);
+            BufferedReader out = networking.Terminal.exec("sudo arp-scan " + ip);
             String line = out.readLine();
             while (line != null) {
                 String[] words = line.split("\t");
@@ -44,7 +44,7 @@ public class Networking {
     }
 
     public static String findConnectedNetwork(String ifName){
-        BufferedReader connections = Terminal.exec(String.format("nmcli d"));
+        BufferedReader connections = networking.Terminal.exec(String.format("nmcli d"));
         String connectionName = "";
         try {
             String line = connections.readLine();
@@ -71,7 +71,7 @@ public class Networking {
     }
 
     public static String getGatewayIp() {
-        BufferedReader output = Terminal.exec("ip r");
+        BufferedReader output = networking.Terminal.exec("ip r");
         try {
             String line = output.readLine();
             String[] words = line.split(" ");
