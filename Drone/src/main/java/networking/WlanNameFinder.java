@@ -1,3 +1,5 @@
+package networking;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,18 +10,9 @@ import java.util.stream.Stream;
 public class WlanNameFinder {
 
 
-    private static final String[] keywords ={"drone", "9300"};
-
-    public static void main(String []aghs) throws IOException {
-
-        getNames();
+    private static final String[] keywords = {"drone", "9300"};
 
 
-    }
-
-
-
-    //
     public static Set<String> getNames() throws IOException {
 
         Runtime rt = Runtime.getRuntime();
@@ -36,10 +29,10 @@ public class WlanNameFinder {
 
         String s = null;
         while ((s = stdInput.readLine()) != null) {
-            String[] arr = s.replace("*" , "").trim().replaceAll(" +", " ").split(" ");
+            String[] arr = s.replace("*", "").trim().replaceAll(" +", " ").split(" ");
 
             //This means no SEC
-            if(arr.length == 8 && Stream.of(keywords).map( st -> arr[0].contains(st)).parallel().anyMatch(b-> b)){
+            if (arr.length == 8 && Stream.of(keywords).map(st -> arr[0].contains(st)).parallel().anyMatch(b -> b)) {
                 resutl.add(arr[0]);
                 System.out.println(s);
             }
@@ -49,4 +42,5 @@ public class WlanNameFinder {
 
         return resutl;
     }
+
 }

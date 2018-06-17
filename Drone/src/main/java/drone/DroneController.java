@@ -1,6 +1,8 @@
+package drone;
+
 import java.net.InetAddress;
 
-public class SendThread extends Thread {
+public class DroneController extends Thread {
 
     private static final int MAX_VALUE = 255;
 
@@ -26,29 +28,50 @@ public class SendThread extends Thread {
     private InetAddress devAddress;
     private UDPServer udpServer;
 
-    public SendThread(InetAddress devAddress) {
+    public DroneController(InetAddress devAddress) {
         this.devAddress = devAddress;
         udpServer = new UDPServer();
         udpServer.Start();
     }
 
+    public void fly() {
+        System.out.println("Stage [0]: taking control");
+    }
+
+    public void land() {
+        System.out.println("Stage [1]: landing");
+        mToflyValue = 0;
+        mSpeedValue = 2;
+        YVL = MAX_VALUE / 4;
+        mToLandValue = 1;
+    }
+
+    public void kill() {
+        System.out.println("Stage [0]: killing motors");
+        mToflyValue = 0;
+        mStopValue = 1;
+    }
+
     public void run() {
         long time = System.currentTimeMillis();
+        int state = 0;
         while (true) {
             long d = System.currentTimeMillis() - time;
 
-            if (0 <= d && d <= 2000) {
-                System.out.println("FLY");
-            } else if (2000 < d && d <= 20000) {
-                mToflyValue = 0;
-                mSpeedValue = 2;
-                YVL = MAX_VALUE/2;
-                mToLandValue = 1;
-                System.out.println("LAND");
-            } else {
-                mToflyValue = 0;
-                mStopValue = 1;
-                System.out.println("STOP");
+            if (state == 0) {
+                state++;
+                time = System.currentTimeMillis();
+                fly();
+            } else if (state == 1 && d > 5000) {
+                state++;
+                time = System.currentTimeMillis();
+                land();
+            } else if (state == 2 && d > 15000) {
+                state++;
+                time = System.currentTimeMillis();
+                kill();
+            } else if (state == 3 && d > 5000) {
+                System.exit(-1);
             }
 
             byte[] data = new byte[11];

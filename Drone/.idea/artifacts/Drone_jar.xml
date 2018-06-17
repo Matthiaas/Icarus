@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Drone:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Drone_jar</output-path>
+    <root id="archive" name="Drone.jar">
+      <element id="module-output" name="Drone" />
+    </root>
+  </artifact>
+</component>

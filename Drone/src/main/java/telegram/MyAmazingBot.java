@@ -1,14 +1,8 @@
-import org.telegram.telegrambots.api.methods.send.SendMessage;
-import org.telegram.telegrambots.api.objects.Update;
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.exceptions.TelegramApiException;
+package telegram;
 
-import java.util.HashSet;
-import java.util.Set;
+public class MyAmazingBot {
 
-public class MyAmazingBot extends TelegramLongPollingBot {
-
-
+/*
     Set<Long> chatIds = new HashSet<Long>();
 
     public void onUpdateReceived(Update update) {
@@ -41,7 +35,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 
     public String getBotUsername() {
         // Return bot username
-        // If bot username is @MyAmazingBot, it must return 'MyAmazingBot'
+        // If bot username is @telegram.MyAmazingBot, it must return 'telegram.MyAmazingBot'
         return "DroneIcarusBot";
     }
 
@@ -50,4 +44,5 @@ public class MyAmazingBot extends TelegramLongPollingBot {
         // Return bot token from BotFather
         return "458351657:AAGiP9BNRXtWT--lFtxenbaOx-l1KM9ZDIo";
     }
+    */
 }

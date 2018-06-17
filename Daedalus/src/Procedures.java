@@ -53,7 +53,6 @@ public class Procedures {
         dc.stop();
     }
 
-
     public static void kill(String essid) {
         System.out.println("EXTERMINATE");
         DroneConnection dc = hijack(essid);

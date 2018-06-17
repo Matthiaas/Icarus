@@ -1,3 +1,5 @@
+package drone;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -6,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UDPServer {
-    public static final String TAG = "UDPServer";
+    public static final String TAG = "drone.UDPServer";
     public static final int UDP_RECEIVE_DATA = 10001;
     public static final int UDP_SERVER_INIT = 10002;
     private boolean isWork = true;
@@ -23,8 +25,8 @@ public class UDPServer {
         }
 
         public void run() {
-            UDPServer.this.mReceiveThread = new Thread(new UDPReceiveThread());
-            UDPServer.this.mReceiveThread.start();
+            drone.UDPServer.this.mReceiveThread = new Thread(new UDPReceiveThread());
+            drone.UDPServer.this.mReceiveThread.start();
         }
     }
     */
@@ -46,24 +48,24 @@ public class UDPServer {
         public void run() {
             byte[] message = new byte[AccessibilityEventCompat.TYPE_GESTURE_DETECTION_START];
             DatagramPacket dataPacket = new DatagramPacket(message, message.length);
-            if (UDPServer.this.mAccesser != null) {
+            if (drone.UDPServer.this.mAccesser != null) {
                 Message msg = new Message();
                 msg.what = 10002;
-                UDPServer.this.mAccesser.sendMessage(msg);
+                drone.UDPServer.this.mAccesser.sendMessage(msg);
             }
-            while (UDPServer.this.isWork) {
+            while (drone.UDPServer.this.isWork) {
                 try {
-                    UDPServer.this.mUDPSocket.receive(dataPacket);
+                    drone.UDPServer.this.mUDPSocket.receive(dataPacket);
                     byte[] recData = new byte[dataPacket.getLength()];
                     System.arraycopy(dataPacket.getData(), 0, recData, 0, recData.length);
-                    if (UDPServer.this.mAccesser != null) {
+                    if (drone.UDPServer.this.mAccesser != null) {
                         msg = new Message();
                         msg.obj = recData;
                         msg.what = 10001;
-                        UDPServer.this.mAccesser.sendMessage(msg);
+                        drone.UDPServer.this.mAccesser.sendMessage(msg);
                     }
                 } catch (Exception e) {
-                    UDPServer.this.mHandler.postDelayed(UDPServer.this.runUDPReceiveThread, 1000);
+                    drone.UDPServer.this.mHandler.postDelayed(drone.UDPServer.this.runUDPReceiveThread, 1000);
                     System.out.print(e.toString());
                     return;
                 }
