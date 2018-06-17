@@ -12,6 +12,11 @@ public class WIFIMonitor {
     static boolean running = false;
     static Set<WIFIHandler> handlers = new HashSet<>();
 
+
+    public static void register(WIFIHandler w){
+        handlers.add(w);
+    }
+
     static final String[] KEYWORDS = {"drone", "9300"};
 
 
@@ -23,7 +28,7 @@ public class WIFIMonitor {
                 try {
                     Set<String> info = getWifiAP();
                     for (WIFIHandler h : handlers) h.handle(info);
-                    Thread.sleep(10000);
+                    Thread.sleep(500);
                 } catch (IOException | InterruptedException e) {
                 }
             }

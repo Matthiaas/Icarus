@@ -1,11 +1,17 @@
 package GUI;
 
+import networking.Procedures;
+import networking.WIFIHandler;
+import networking.WIFIMonitor;
+
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Set;
 
-public class GUIMain extends JDialog {
+public class GUIMain extends JDialog implements WIFIHandler {
     private JPanel contentPane;
     private JButton DOSButton;
     private JButton HIJACKButton;
@@ -15,56 +21,73 @@ public class GUIMain extends JDialog {
     private JList list1;
     private JTextPane textPane1;
     private JTextPane textPane2;
+
+
+    private String selectedSSid;
     DefaultListModel<String> model;
 
-
+    private boolean enabled = false;
 
 
     public GUIMain() {
 
         setContentPane(contentPane);
         setModal(true);
-        //this.setDefaultCloseOperation(1);
-
         textPane1.setEditable(false);
         textPane2.setEditable(false);
 
         // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 
+        WIFIMonitor.register(this);
 
-        DOSButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-
-            }
-        });
         HIJACKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                if(enabled)
+                {
+                    LANDButton.setEnabled(true);
+                    KILLButton.setEnabled(true);
+                    BALLONButton.setEnabled(true);
+                }else{
+                    LANDButton.setEnabled(false);
+                    KILLButton.setEnabled(false);
+                    BALLONButton.setEnabled(false);
+                }
 
+                enabled = !enabled;
             }
         });
         LANDButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
+                Procedures.land(selectedSSid);
             }
         });
         KILLButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
+                Procedures.kill(selectedSSid);
             }
         });
         BALLONButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
+                Procedures.balloon(selectedSSid);
             }
         });
 
-        
+
+        list1.addListSelectionListener(new ListSelectionListener() {
+
+            @Override
+            public void valueChanged(ListSelectionEvent arg0) {
+                if (!arg0.getValueIsAdjusting()) {
+                    String info = Procedures.info(list1.getSelectedValue().toString());
+                    textPane2.setText(info);
+                }
+            }
+        });
 
 
     }
@@ -78,12 +101,7 @@ public class GUIMain extends JDialog {
     }
 
 
-    public static void main(String[] args) {
-        GUIMain dialog = new GUIMain();
-        dialog.pack();
-        dialog.setVisible(true);
-        System.exit(0);
-    }
+
 
     private void createUIComponents() {
         model = new DefaultListModel<>();
