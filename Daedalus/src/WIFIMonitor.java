@@ -1,5 +1,3 @@
-package networking;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashSet;
@@ -12,6 +10,11 @@ public class WIFIMonitor {
     static boolean running = false;
     static Set<WIFIHandler> handlers = new HashSet<>();
 
+
+    public static void register(WIFIHandler w){
+        handlers.add(w);
+    }
+
     static final String[] KEYWORDS = {"drone", "9300"};
 
 
@@ -23,7 +26,7 @@ public class WIFIMonitor {
                 try {
                     Set<String> info = getWifiAP();
                     for (WIFIHandler h : handlers) h.handle(info);
-                    Thread.sleep(10000);
+                    Thread.sleep(500);
                 } catch (IOException | InterruptedException e) {
                 }
             }
@@ -40,7 +43,7 @@ public class WIFIMonitor {
     }
 
 
-    private static Set<String> getWifiAP() throws IOException {
+    public static Set<String> getWifiAP() throws IOException {
 
         Set<String> result = new HashSet<String>(20);
         BufferedReader stdInput = Terminal.exec("nmcli dev wifi");
